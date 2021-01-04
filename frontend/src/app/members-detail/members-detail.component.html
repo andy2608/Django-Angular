@@ -1,3 +1,14 @@
-<p>members-detail works!</p>
+<span>Você está editando: {{selected_member.name}} - {{selected_member.surname}} </span> 
 
-Membro carregado: {{selected_member.name}} - {{selected_member.surname}} 
+<span class="image left"> 
+    <img src="{{selected_member.photo}}" alt="Foto de {{selected_member.name}}">
+</span>
+<br>
+<input type="text" [(ngModel)]= "selected_member.id" readonly><br>
+<input type="text" [(ngModel)]= "selected_member.name"><br>
+<input type="text" [(ngModel)]= "selected_member.surname">
+<button (click)="update()"class="button ">Update Member</button>
+
+<button (click)="delete()" class="button ">Deletar</button>
+
+<button (click)="newMember()"class="button primary">Novo</button>

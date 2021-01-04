@@ -16,4 +16,5 @@ class MemberSimpleSerializer(serializers.ModelSerializer):
         model = Member
         fields = ['id', 
                   'name',
+                  'surname',
                   ]
